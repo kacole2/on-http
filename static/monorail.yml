@@ -677,6 +677,7 @@ paths:
         default:
           description: Unexpected error
           schema:
+            type: object
 
   /workflows/tasks/library:
     get:
@@ -727,7 +728,8 @@ paths:
         - name: body
           in: body
           required: false
-          type: object
+          schema:
+            type: object
       tags:
         - workflow
         - task
@@ -801,7 +803,8 @@ paths:
         - name: body
           in: body
           required: false
-          type: object
+          schema:
+            type: object
       tags:
         - workflow
         - put
@@ -940,7 +943,8 @@ paths:
         - name: body
           in: body
           required: false
-          type: object
+          schema:
+            type: object
       tags:
         - nodes
         - workflow
@@ -977,7 +981,8 @@ paths:
         - name: body
           in: body
           required: false
-          type: object
+          schema:
+            type: object
       tags:
         - nodes
         - dhcp
@@ -1432,7 +1437,7 @@ paths:
         - name: q
           in: query
           description: query object to pass through to waterline.
-          required: false
+          required: true
           type: string
       tags:
         - lookups
@@ -1539,7 +1544,8 @@ paths:
           description: |
             object patches to apply.
           required: true
-          type: object
+          schema:
+            type: object
       tags:
         - lookups
         - get
@@ -1714,7 +1720,8 @@ paths:
         - name: body
           in: body
           required: true
-          type: object
+          schema:
+            type: object
       tags:
         - config
         - patch
